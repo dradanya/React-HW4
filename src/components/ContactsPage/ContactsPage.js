@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ContactList from './ContactList.js';
-import ContactForm from './ContactForm.js';
+import ContactList from './ContactsList'
+import ContactForm from './ContactsForm'
 
 const ContactsPage = () => {
   const [contacts, setContacts] = useState([]);

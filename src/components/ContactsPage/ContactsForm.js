@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const ContactForm = ({ onSaveContact, onCancel }) => {
   const [name, setName] = useState('');
@@ -6,7 +7,8 @@ const ContactForm = ({ onSaveContact, onCancel }) => {
   const [phone, setPhone] = useState('');
 
   const handleSave = () => {
-    onSaveContact({ name, surname, phone });
+    const id = uuidv4();
+    onSaveContact({ name, surname, phone, id });
     setName('');
     setSurname('');
     setPhone('');
